@@ -3,13 +3,10 @@ package dojo.ttt
 import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
 import org.scalatest.FunSuite
+import TestUtils._
 
 @RunWith(classOf[JUnitRunner])
 class GameBoardTest extends FunSuite {
-
-  def emptyBoard: GameBoard = new SeqBoard
-
-  def boardOf(tokens: Token*): GameBoard = new SeqBoard(tokens.grouped(3).toSeq)
 
   test("empty and non-empty game board") {
     assert(emptyBoard.isEmpty)

@@ -6,7 +6,7 @@ class SeqBoard(grid: Seq[Seq[Token]]) extends GameBoard {
 
   def isEmpty = grid.flatten.forall(_ == Empty)
 
-  def availablePositions =
+  lazy val availablePositions =
     for {
       rowIdx <- 0 to 2
       row = grid(rowIdx)
@@ -23,7 +23,7 @@ class SeqBoard(grid: Seq[Seq[Token]]) extends GameBoard {
     new SeqBoard(newGrid)
   }
 
-  def state = {
+  lazy val state = {
     def win(token: PlayerToken) =
       GameBoard.winCombinations.exists(_.forall(pos =>
         grid(pos.row)(pos.column) == token))
