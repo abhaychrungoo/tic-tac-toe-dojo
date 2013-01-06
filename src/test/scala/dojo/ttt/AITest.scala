@@ -15,28 +15,28 @@ class AITest extends FunSuite {
       X, e, X,
       e, e, O,
       e, X, O
-    ), turn = O) == new Position(row = 0, column = 1))
+    ), player = O) == new Position(row = 0, column = 1))
 
     // X about to win by diagonal combination (best possible outcome for O will be win)
     assert(ai.bestMove(boardOf(
       X, e, e,
       e, e, O,
       O, X, X
-    ), turn = O) == new Position(row = 1, column = 1))
+    ), player = O) == new Position(row = 1, column = 1))
 
     // X about to win by column combination (best possible outcome for O will be draw)
     assert(ai.bestMove(boardOf(
       O, X, X,
       X, e, e,
       O, e, X
-    ), turn = O) == new Position(row = 1, column = 2))
+    ), player = O) == new Position(row = 1, column = 2))
 
     // X about to win by diagonal combination (best possible outcome for O will be draw)
     assert(ai.bestMove(boardOf(
       O, X, e,
       e, X, O,
       X, O, X
-    ), turn = O) == new Position(row = 0, column = 2))
+    ), player = O) == new Position(row = 0, column = 2))
   }
 
 
@@ -45,19 +45,19 @@ class AITest extends FunSuite {
       O, O, e,
       e, e, e,
       X, e, X
-    ), turn = X) == new Position(row = 2, column = 1))
+    ), player = X) == new Position(row = 2, column = 1))
 
     assert(ai.bestMove(boardOf(
       X, e, O,
       e, O, X,
       X, e, O
-    ), turn = X) == new Position(row = 1, column = 0))
+    ), player = X) == new Position(row = 1, column = 0))
 
     assert(ai.bestMove(boardOf(
       O, e, X,
       X, e, e,
       X, O, O
-    ), turn = X) == new Position(row = 1, column = 1))
+    ), player = X) == new Position(row = 1, column = 1))
   }
 
 
@@ -66,19 +66,19 @@ class AITest extends FunSuite {
       O, e, X,
       X, O, O,
       X, O, X
-    ), turn = X) == new Position(row = 0, column = 1))
+    ), player = X) == new Position(row = 0, column = 1))
 
     assert(ai.bestMove(boardOf(
       O, O, X,
       X, e, O,
       X, O, X
-    ), turn = X) == new Position(row = 1, column = 1))
+    ), player = X) == new Position(row = 1, column = 1))
 
     assert(ai.bestMove(boardOf(
       O, X, X,
       X, O, O,
       e, O, X
-    ), turn = X) == new Position(row = 2, column = 0))
+    ), player = X) == new Position(row = 2, column = 0))
   }
 
 
@@ -87,7 +87,7 @@ class AITest extends FunSuite {
       X, O, X,
       e, e, O,
       e, X, O
-    ), turn = X)
+    ), player = X)
     assert(bestMove == new Position(row = 2, column = 0))
   }
 

@@ -90,6 +90,7 @@ class UI {
       case Draw => "It's a tie!"
       case WinX => "Player X won!"
       case WinO => "Player O won!"
+      case _ => throw new IllegalStateException("Game still in progress")
     }
     JOptionPane.showMessageDialog(frame, resultMessage(result))
   }

@@ -1,7 +1,12 @@
 package dojo.ttt
 
 sealed trait BoardState {
+
+  /**
+   * @return true if current state represents a final game board (e.g win condition or draw)
+   */
   def isTerminal: Boolean = true
+
 }
 
 /**
@@ -19,9 +24,7 @@ case object Draw extends BoardState
 /**
  * Player X won.
  */
-case object WinX extends BoardState {
-
-}
+case object WinX extends BoardState
 
 /**
  * Player O won.
