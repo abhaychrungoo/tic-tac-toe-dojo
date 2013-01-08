@@ -9,27 +9,10 @@
   <version>1.0</version>
 
   <properties>
-    <scala.version>2.10.0</scala.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
   <dependencies>
-    <dependency>
-      <groupId>org.scala-lang</groupId>
-      <artifactId>scala-compiler</artifactId>
-      <version>${scala.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.scala-lang</groupId>
-      <artifactId>scala-library</artifactId>
-      <version>${scala.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.scalatest</groupId>
-      <artifactId>scalatest_${scala.version}</artifactId>
-      <version>2.0.M5</version>
-      <scope>test</scope>
-    </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -37,27 +20,5 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.scala-tools</groupId>
-        <artifactId>maven-scala-plugin</artifactId>
-        <version>2.15.2</version>
-        <executions>
-          <execution>
-            <goals>
-              <goal>compile</goal>
-              <goal>testCompile</goal>
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <sourceDir>src/main/scala</sourceDir>
-          <testSourceDir>src/test/scala</testSourceDir>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
 
 </project>

@@ -9,6 +9,9 @@ public final class TicTacToeUtils {
 
     private TicTacToeUtils(){}
 
+    /**
+     * Provides all the position combinations that would result in a win.
+     */
     public static final Collection<Collection<Position>> WIN_COMBINATIONS =
         Collections.unmodifiableCollection(createWinCombinations());
 

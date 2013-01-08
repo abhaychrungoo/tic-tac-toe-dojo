@@ -1,10 +1,8 @@
 package dojo.ttt;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.junit.Test;
 
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
@@ -33,17 +31,17 @@ public class BoardTest {
     @Test
     public void partiallyFullBoard() {
         final Board board = BoardFactory.createBoard(
-            '-', 'X', '0',
+            '-', 'X', 'O',
             'O', '-', 'X',
             'X', 'O', '-'
         );
 
-        List<Position> expectedPositions = new ArrayList<Position>(3);
+        Position[] expectedPositions = new Position[3];
         for (int i = 0; i <= 2; i++) {
-            expectedPositions.add(new Position(i, i));
+            expectedPositions[i] = new Position(i, i);
         }
 
-        assertEquals(board.getAvailablePositions(), expectedPositions);
+        assertArrayEquals(board.getAvailablePositions().toArray(), expectedPositions);
     }
 
     @Test
@@ -56,7 +54,7 @@ public class BoardTest {
         board = board.mark(new Position(0, 1), Player.O);
         board = board.mark(new Position(2, 0), Player.X);
         board = board.mark(new Position(1, 1), Player.O);
-        board = board.mark(new Position(1, 0), Player.O);
+        board = board.mark(new Position(1, 0), Player.X);
 
         Board expectedBoard = BoardFactory.createBoard(
             'X', 'O', 'X',

@@ -3,6 +3,8 @@ package dojo.ttt.swing;/*
 * Yaana Technologies PROPRIETARY/CONFIDENTIAL.
 */
 
+import java.awt.*;
+
 import javax.swing.*;
 
 import dojo.ttt.Player;
@@ -15,6 +17,9 @@ public class Button extends JButton {
 
     public Button(Position position) {
         this.position = position;
+        setFont(getFont().deriveFont(100f));
+        updateButtonText();
+        setPreferredSize(new Dimension(120, 120));
     }
 
     public Position getPosition() {

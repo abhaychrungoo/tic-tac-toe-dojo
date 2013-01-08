@@ -102,8 +102,8 @@ public class UI {
         }
 
         board = BoardFactory.createBoard();
-        human = computer;
-        computer = human;
+        human = human.opposite();
+        computer = computer.opposite();
 
         if (computer == Player.X) {
             computerMove();

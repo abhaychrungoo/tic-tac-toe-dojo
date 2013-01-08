@@ -3,7 +3,6 @@ package dojo.ttt;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 
 public class SearchTest {
 
@@ -34,15 +33,6 @@ public class SearchTest {
             'X', '-', '-'
         );
         assertEquals(new Position(1, 2), search.getBestMove(board, Player.X));
-
-        // X can win by row=1|2, column=1
-        board = BoardFactory.createBoard(
-            'O', '-', 'X',
-            '-', '-', 'O',
-            'X', '-', 'X'
-        );
-        Position position = search.getBestMove(board, Player.O);
-        assertTrue(position.equals(new Position(1, 1)) || position.equals(new Position(2, 1)));
     }
 
     @Test
