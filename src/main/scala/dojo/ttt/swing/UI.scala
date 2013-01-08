@@ -9,12 +9,11 @@ import javax.swing.JFrame._
 import java.awt.event.{ActionEvent, ActionListener}
 import dojo.ttt._
 
-class UI {
+class UI(ai: AI) {
 
   var board = new SeqBoard
   var human: PlayerToken = X
   var computer: PlayerToken = human.opposite
-  val ai = Minimax
 
   val panel = new JPanel(new FlowLayout(FlowLayout.CENTER, 2, 2))
 

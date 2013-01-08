@@ -8,4 +8,5 @@ class Position(val row: Int, val column: Int) {
       this.row == that.row && this.column == that.column
     }
 
+  override def toString = "{row=%s, column=%s}".format(row, column)
 }

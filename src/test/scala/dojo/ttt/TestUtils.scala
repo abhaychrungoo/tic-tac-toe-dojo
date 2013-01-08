@@ -8,6 +8,6 @@ object TestUtils {
 
   def boardOf(tokens: Token*): GameBoard = new SeqBoard(tokens.grouped(3).toSeq)
 
-  def ai: AI = Minimax
+  def ai: AI = new AlphaBetaPruning
 
 }
