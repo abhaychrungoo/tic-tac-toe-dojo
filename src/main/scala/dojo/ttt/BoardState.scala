@@ -1,6 +1,6 @@
 package dojo.ttt
 
-sealed trait BoardState {
+sealed trait BoardState2 {
 
   /**
    * @return true if current state represents a final game board (e.g win condition or draw)
@@ -12,21 +12,21 @@ sealed trait BoardState {
 /**
  * Means that there are still empty positions where to put a player token.
  */
-case object Play extends BoardState {
+case object Play extends BoardState2 {
   override def isTerminal = false
 }
 
 /**
  * The game board is full, but nobody won.
  */
-case object Draw extends BoardState
+case object Draw extends BoardState2
 
 /**
  * Player X won.
  */
-case object WinX extends BoardState
+case object WinX extends BoardState2
 
 /**
  * Player O won.
  */
-case object WinO extends BoardState
+case object WinO extends BoardState2

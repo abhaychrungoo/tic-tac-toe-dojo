@@ -2,9 +2,9 @@ package dojo.ttt;
 
 import scala.collection.Iterator;
 
-public class AlphaBetaPruning implements AI {
+public class AlphaBetaPruning {
 
-    @Override
+    /*@Override
     public Position bestMove(GameBoard board, PlayerToken player) {
         int bestScore = Integer.MIN_VALUE;
         Position bestPosition = null;
@@ -83,5 +83,5 @@ public class AlphaBetaPruning implements AI {
             else
                 return 0;
         }
-    }
+    }*/
 }

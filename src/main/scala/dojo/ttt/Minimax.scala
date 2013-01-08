@@ -2,7 +2,8 @@ package dojo.ttt
 
 import util.Random
 
-object Minimax extends AI {
+object Minimax {
+/*
 
   def bestMove(board: GameBoard, player: PlayerToken) = {
     if (board.isEmpty)
@@ -60,5 +61,6 @@ object Minimax extends AI {
     def bestMove(moves: Seq[Move]) = moves.maxBy(_.score)
     def opposite = Minimizer
   }
+*/
 
 }

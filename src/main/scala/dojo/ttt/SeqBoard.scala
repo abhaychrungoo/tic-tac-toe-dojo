@@ -1,7 +1,7 @@
 package dojo.ttt
 
-class SeqBoard(grid: Seq[Seq[Token]]) extends GameBoard {
-
+class SeqBoard { //(grid: Seq[Seq[Player]]) extends GameBoard {
+/*
   def this() = this(Iterator.continually(Empty).take(3 * 3).grouped(3).toSeq)
 
   def isEmpty = grid.flatten.forall(_ == Empty)
@@ -32,5 +32,5 @@ class SeqBoard(grid: Seq[Seq[Token]]) extends GameBoard {
     else if (win(O)) WinO
     else if (availablePositions.isEmpty) Draw
     else Play
-  }
+  }*/
 }

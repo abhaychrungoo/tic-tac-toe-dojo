@@ -1,6 +1,7 @@
 package dojo.ttt
 
-object Minimax2 extends AI {
+object Minimax2 {
+/*
 
   def bestMove(board: GameBoard, player: PlayerToken) = {
     val evaluate = evaluateFactory(player)
@@ -41,5 +42,6 @@ object Minimax2 extends AI {
     def opposite = MinNode
     def pick(scores: Seq[Int]) = scores.max
   }
+*/
 
 }

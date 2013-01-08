@@ -3,18 +3,18 @@ package dojo.ttt
 /**
  * Token represents the concept of what can be put on the game board at some position.
  */
-sealed trait Token
+sealed trait Token2
 
 /**
  * This token is used to denote that the game board does not contain anything at the given position.
  */
-case object Empty extends Token
+case object Empty extends Token2
 
 
 /**
  * Represents a token that a player can use: either X or O.
  */
-sealed trait PlayerToken extends Token {
+sealed trait PlayerToken extends Token2 {
 
   /**
    * @return the opponent symbol of this player
