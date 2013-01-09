@@ -46,4 +46,19 @@ public final class TicTacToeUtils {
         return combinations;
     }
 
+    /**
+     * Reuse the common pattern of doing something for every grid position.
+     * @param callback a callback interface that gets executed for each row/column iteration
+     */
+    public static void forEach(Callback callback) {
+        for (int row = 0; row <= 2; row++) {
+            for (int column = 0; column <= 2; column++) {
+                callback.execute(row, column);
+            }
+        }
+    }
+
+    public static interface Callback {
+        void execute(int row, int column);
+    }
 }
