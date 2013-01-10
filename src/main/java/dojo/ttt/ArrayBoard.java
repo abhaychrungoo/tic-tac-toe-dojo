@@ -1,6 +1,7 @@
 package dojo.ttt;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 
 import static dojo.ttt.BoardState.DRAW;
@@ -108,10 +109,6 @@ public class ArrayBoard implements Board {
 
                 final Player thisMark = ArrayBoard.this.grid[row][column];
                 final Player thatMark = that.grid[row][column];
-
-                if (thisMark == null ^ thatMark == null) {
-                    return false;
-                }
 
                 if (thisMark != thatMark) {
                     return false;
