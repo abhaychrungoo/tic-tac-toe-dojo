@@ -42,7 +42,11 @@ public class BoardTest {
         for (int i = 0; i <= 2; i++) {
             expectedPositions[i] = new Position(i, i);
         }
-      assertEquals(new TreeSet(board.getAvailablePositions()), new TreeSet(Arrays.asList(expectedPositions)));
+//        for (Position  position: expectedPositions) System.out.println(position);
+//        System.out.println("-----------------------");
+//        for (Position  position: board.getAvailablePositions()) System.out.println(position);
+//		Original test is incorrect. Order should not matter. Incorrect usage of AssertArrayEquals.
+        assertEquals(new TreeSet(board.getAvailablePositions()), new TreeSet(Arrays.asList(expectedPositions)));
     }
 
     @Test

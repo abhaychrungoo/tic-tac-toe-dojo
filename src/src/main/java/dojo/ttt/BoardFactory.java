@@ -8,7 +8,7 @@ public final class BoardFactory {
      * @return empty board
      */
     public static Board createBoard() {
-        return new MapBoard(); 
+        return new TicTacToeBoard(); 
     }
 
     /**
@@ -16,7 +16,7 @@ public final class BoardFactory {
      * @return new board based on the tokens
      */
     public static Board createBoard(char... tokens) {
-    	return new MapBoard(tokens);
+    	return new TicTacToeBoard(tokens);
     }
 
 }
