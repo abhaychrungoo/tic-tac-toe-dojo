@@ -45,13 +45,11 @@ public class IntBoard implements Board {
 		int boardPositions = xPositions | oPositions;
 		int counter = 0;
 		while (counter < 9) {
-			System.out.println(Integer.toBinaryString(boardPositions));
 			if ((boardPositions & 0x1) == 0)
 				availablePositions.add(new Position(counter / 3, counter % 3));
 			boardPositions = boardPositions >> 1;
 			counter++;
 		}
-		System.out.println("availablePositions " + availablePositions);
 		return availablePositions;
 	}
 
